@@ -13,13 +13,13 @@
         </figure>
         <div class="authentication-modal__content">
           <h1 class="authentication-modal__title">
-            Log in to continue
+            Entre para continuar
           </h1>
           <p class="authentication-modal__description">
             <% if SiteConfig.tagline.present? %>
               <%= SiteConfig.tagline %>
             <% else %>
-              We’d love for you to be a part of this community.
+              Adoraríamos que você fizesse parte desta comunidade.
             <% end %>
           </p>
         </div>
@@ -27,15 +27,15 @@
 
       <div class="authentication-modal__actions">
         <a href="<%= sign_up_path %>" class="crayons-btn" aria-label="Log in" data-no-instant>
-          Log in
+          Entrar
         </a>
         <a href="<%= sign_up_path(state: "new-user") %>" class="crayons-btn crayons-btn--ghost-brand" aria-label="Create new account" data-no-instant>
-          Create new account
+          Criar nova conta
         </a>
       </div>
       <footer class="authentication-modal__footer">
         <p class="authentication-modal__footer-label">
-          We strive for transparency and don't collect excess data.
+          Buscamos transparência e não coletamos dados em excesso.
         </p>
       </footer>
     </div>

@@ -58,7 +58,7 @@ class SiteConfig < RailsSettings::Base
   field :collective_noun, type: :string, default: "Community"
   field :collective_noun_disabled, type: :boolean, default: false
   field :community_description, type: :string
-  field :community_member_label, type: :string, default: "user"
+  field :community_member_label, type: :string, default: "membros"
   field :tagline, type: :string
   field :community_copyright_start_year, type: :integer,
                                          default: ApplicationConfig["COMMUNITY_COPYRIGHT_START_YEAR"] ||

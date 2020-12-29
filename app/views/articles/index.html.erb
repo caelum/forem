@@ -43,20 +43,20 @@
 
         <nav class="crayons-tabs hidden s:flex">
           <a href="<%= list_path %>/" class="crayons-tabs__item <%= "crayons-tabs__item--current" if %w[week month year infinity latest].exclude?(params[:timeframe]) %>">Feed</a>
-          <a href="<%= list_path %>/top/week" class="crayons-tabs__item <%= "crayons-tabs__item--current" if timeframe_check("week") %>">Week</a>
-          <a href="<%= list_path %>/top/month" class="crayons-tabs__item <%= "crayons-tabs__item--current" if timeframe_check("month") %>">Month</a>
-          <a href="<%= list_path %>/top/year" class="crayons-tabs__item <%= "crayons-tabs__item--current" if timeframe_check("year") %>">Year</a>
-          <a href="<%= list_path %>/top/infinity" class="crayons-tabs__item <%= "crayons-tabs__item--current" if timeframe_check("infinity") %>">Infinity</a>
-          <a href="<%= list_path %>/latest" class="crayons-tabs__item <%= "crayons-tabs__item--current" if timeframe_check("latest") %>">Latest</a>
+          <a href="<%= list_path %>/top/week" class="crayons-tabs__item <%= "crayons-tabs__item--current" if timeframe_check("week") %>">Semana</a>
+          <a href="<%= list_path %>/top/month" class="crayons-tabs__item <%= "crayons-tabs__item--current" if timeframe_check("month") %>">Mês</a>
+          <a href="<%= list_path %>/top/year" class="crayons-tabs__item <%= "crayons-tabs__item--current" if timeframe_check("year") %>">Ano</a>
+          <a href="<%= list_path %>/top/infinity" class="crayons-tabs__item <%= "crayons-tabs__item--current" if timeframe_check("infinity") %>">Infinito</a>
+          <a href="<%= list_path %>/latest" class="crayons-tabs__item <%= "crayons-tabs__item--current" if timeframe_check("latest") %>">Mais recentes</a>
         </nav>
 
         <select class="crayons-select s:hidden ml-2 s:ml-auto w-auto" id="feed-filter-select" aria-label="feed-filter-select">
           <option value="<%= list_path %>" <% if ["week", "month", "year", "infinity", "latest"].exclude?(params[:timeframe]) %> selected<% end %>>Feed</option>
-          <option value="<%= list_path %>/top/week" <% if timeframe_check("week") %> selected<% end %>>Week</option>
-          <option value="<%= list_path %>/top/month" <% if timeframe_check("month") %> selected<% end %>>Month</option>
-          <option value="<%= list_path %>/top/year" <% if timeframe_check("year") %> selected<% end %>>Year</option>
-          <option value="<%= list_path %>/top/infinity" <% if timeframe_check("infinity") %> selected<% end %>>Infinity</option>
-          <option value="<%= list_path %>/latest" <% if timeframe_check("latest") %> selected<% end %>>Latest</option>
+          <option value="<%= list_path %>/top/week" <% if timeframe_check("week") %> selected<% end %>>Semana</option>
+          <option value="<%= list_path %>/top/month" <% if timeframe_check("month") %> selected<% end %>>Mês</option>
+          <option value="<%= list_path %>/top/year" <% if timeframe_check("year") %> selected<% end %>>Ano</option>
+          <option value="<%= list_path %>/top/infinity" <% if timeframe_check("infinity") %> selected<% end %>>Infinito</option>
+          <option value="<%= list_path %>/latest" <% if timeframe_check("latest") %> selected<% end %>>Mais recentes</option>
         </select>
       </header>
 
@@ -68,7 +68,7 @@
 
       <div id="followed-podcasts" data-episodes="<%= @podcast_episodes.to_json(include: { podcast: { only: %i[slug title id], methods: %i[image_90] } }) %>"></div>
       <div class="loading-articles" id="loading-articles">
-        loading...
+        carregando...
       </div>
     </main>
 
