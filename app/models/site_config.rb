@@ -56,7 +56,7 @@ class SiteConfig < RailsSettings::Base
   field :community_name, type: :string, default: ApplicationConfig["COMMUNITY_NAME"] || "New Forem"
   field :community_emoji, type: :string, default: "🌱"
   field :community_description, type: :string
-  field :community_member_label, type: :string, default: "user"
+  field :community_member_label, type: :string, default: "membros"
   field :tagline, type: :string
   field :community_copyright_start_year, type: :integer,
                                          default: ApplicationConfig["COMMUNITY_COPYRIGHT_START_YEAR"] ||

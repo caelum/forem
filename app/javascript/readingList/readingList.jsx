@@ -214,7 +214,7 @@ export class ReadingList extends Component {
             <input
               aria-label="Search..."
               onKeyUp={this.onSearchBoxType}
-              placeholder="Search..."
+              placeholder="Buscar..."
               className="crayons-textfield"
             />
           </div>

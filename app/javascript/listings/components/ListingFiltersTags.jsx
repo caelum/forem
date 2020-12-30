@@ -18,7 +18,7 @@ const ListingFiltersTags = ({
     <div className="relative pb-2 m:pb-6 px-2 m:px-0">
       <input
         type="text"
-        placeholder="Search..."
+        placeholder="Buscar..."
         id="listings-search"
         aria-label="Search listings"
         autoComplete="off"
