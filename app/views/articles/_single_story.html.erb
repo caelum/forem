@@ -85,7 +85,7 @@
         </div>
         <div class="crayons-story__save">
           <small class="crayons-story__tertiary fs-xs mr-2">
-            Lido à <%= story.reading_time < 1 ? 1 : story.reading_time %> min
+            <%= story.reading_time < 1 ? 1 : story.reading_time %> min de leitura
           </small>
           <button type="button" id="article-save-button-<%= story.id %>" class="crayons-btn crayons-btn--secondary crayons-btn--s bookmark-button" data-reactable-id="<%= story.id %>" aria-label="Save to reading list" title="Save to reading list">
             <span class="bm-initial">Salvar</span>

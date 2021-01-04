@@ -155,14 +155,14 @@ class FollowTags extends Component {
                       {selectedTags.includes(tag) ? (
                         <span>
                           <span className="onboarding-tags__button-default">
-                            ✓ Following
+                            ✓ Seguindo
                           </span>
                           <span className="onboarding-tags__button-alt">
-                            Unfollow
+                          Deixar de seguir
                           </span>
                         </span>
                       ) : (
-                        'Follow'
+                        'Seguir'
                       )}
                     </button>
                   </div>

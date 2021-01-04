@@ -14,7 +14,7 @@
         <% if @organization.company_size.present? %>
           <li>
             <div class="key">
-              Employees
+              Funcionários
             </div>
             <div class="value">
               <%= @organization.company_size %>
@@ -24,7 +24,7 @@
         <% if @organization.email.present? %>
           <li>
             <div class="key">
-              Support email
+              Email de suporte
             </div>
             <div class="value">
               <a href="mailto:<%= sanitize @organization.email %>"><%= sanitize @organization.email %></a>
@@ -46,7 +46,7 @@
       <% if @user.employment_title.present? %>
         <li>
           <div class="key">
-            Work
+            Trabalho
           </div>
           <div class="value">
             <%= @user.employment_title %>
@@ -64,7 +64,7 @@
       <% if @user.location.present? %>
         <li>
           <div class="key">
-            Location
+            Localização
           </div>
           <div class="value">
             <%= @user.location %>
@@ -74,17 +74,17 @@
       <% if @user.looking_for_work_publicly == true && @user.looking_for_work == true %>
         <li>
           <div class="key">
-            Work status
+            Status de trabalho
           </div>
           <div class="value">
-            I'm looking for work!
+            Estou procurando trabalho!
           </div>
         </li>
       <% end %>
       <% if @user.education.present? %>
         <li>
           <div class="key">
-            Education
+            Educação
           </div>
           <ul class="value">
             <%= @user.education %>
@@ -94,7 +94,7 @@
     <% end %>
     <li>
       <div class="key">
-        Joined
+        Entrou
       </div>
       <div class="value">
         <%= local_date(@user.created_at) %>

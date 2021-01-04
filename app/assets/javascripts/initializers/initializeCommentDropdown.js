@@ -34,7 +34,7 @@ function initializeCommentDropdown() {
 
     Runtime.copyToClipboard(permalink).then(() => {
       // eslint-disable-next-line no-undef
-      addSnackbarItem({ message: 'Copied to clipboard' });
+      addSnackbarItem({ message: 'Copiado para o clipboard' });
     });
   }
 

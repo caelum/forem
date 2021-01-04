@@ -5,21 +5,21 @@
       <%= render partial: "articles/reaction_button",
                  locals: {
                    category: :like,
-                   description: "Heart",
+                   description: "Coração",
                    image_path: "heart.svg",
                    image_active_path: "heart-filled.svg"
                  } %>
       <%= render partial: "articles/reaction_button",
                  locals: {
                    category: :unicorn,
-                   description: "Unicorn",
+                   description: "Unicórnio",
                    image_path: "unicorn.svg",
                    image_active_path: "unicorn-filled.svg"
                  } %>
       <%= render partial: "articles/reaction_button",
                  locals: {
                    category: :readinglist,
-                   description: "Saved",
+                   description: "Salvo",
                    image_path: "save.svg",
                    image_active_path: "save-filled.svg"
                  } %>
@@ -35,7 +35,7 @@
             <input type="text" id="article-copy-link-input" value="<%= article_url(@article) %>" class="crayons-textfield" readonly />
             <%= inline_svg_tag("copy.svg", aria: true, id: "article-copy-icon", class: "crayons-icon mx-2 shrink-0", title: "Notifications") %>
           </div>
-          <div id="article-copy-link-announcer" role="alert" class="crayons-notice crayons-notice--success my-2 p-1" hidden>Copied to Clipboard</div>
+          <div id="article-copy-link-announcer" role="alert" class="crayons-notice crayons-notice--success my-2 p-1" hidden>Copiado para o clipboard</div>
         </clipboard-copy>
         <web-share-wrapper shareurl="<%= article_url(@article) %>" sharetext="<%= @article.title %>" template="web-share-button">
           <a
@@ -43,41 +43,41 @@
             class="dropdown-link-row crayons-link crayons-link--block"
             rel="noopener"
             href='https://twitter.com/intent/tweet?text="<%= u @article.title.strip %>" by <%= @article.user.twitter_username ? "@#{@article.user.twitter_username}" : @article.user.name %> <%= u SiteConfig.twitter_hashtag %> <%= article_url(@article) %>'>
-            Share to Twitter
+            Compartilhar no Twitter
           </a>
           <a
             target="_blank"
             class="dropdown-link-row crayons-link crayons-link--block"
             rel="noopener"
             href="https://www.linkedin.com/shareArticle?mini=true&url=<%= article_url(@article) %>&title=<%= @article.title %>&summary=<%= @article.description %>&source=<%= community_name %>">
-            Share to LinkedIn
+            Compartilhar no LinkedIn
           </a>
           <a
             target="_blank"
             class="dropdown-link-row crayons-link crayons-link--block"
             rel="noopener"
             href="https://www.reddit.com/submit?url=<%= article_url(@article) %>&title=<%= @article.title %>">
-            Share to Reddit
+            Compartilhar no Reddit
           </a>
           <a
             target="_blank"
             class="dropdown-link-row crayons-link crayons-link--block"
             rel="noopener"
             href="https://news.ycombinator.com/submitlink?u=<%= article_url(@article) %>&t=<%= @article.title %>">
-            Share to Hacker News
+            Compartilhar no Hacker News
           </a>
           <a
             target="_blank"
             class="dropdown-link-row crayons-link crayons-link--block"
             rel="noopener"
             href="https://www.facebook.com/sharer.php?u=<%= article_url(@article) %>">
-            Share to Facebook
+            Compartilhar no Facebook
           </a>
         </web-share-wrapper>
         <template id="web-share-button">
-          <a href="#" class="dropdown-link-row crayons-link crayons-link--block">Share Post</a>
+          <a href="#" class="dropdown-link-row crayons-link crayons-link--block">Compartilhar Post</a>
         </template>
-        <a href="/report-abuse" class="dropdown-link-row crayons-link crayons-link--block">Report Abuse</a>
+        <a href="/report-abuse" class="dropdown-link-row crayons-link crayons-link--block">Reportar abuso</a>
       </div>
     </div>
   </div>
