@@ -13,13 +13,13 @@
     </h3>
     <% if article.published %>
       <p class="fs-s color-base-60 js-dashboard-story-details">
-        <strong class="fw-medium">Published:</strong>
+        <strong class="fw-medium">Publicado:</strong>
         <%= local_date(article.published_timestamp, show_year: article.displayable_published_at.year != Time.current.year) %>
         <% if article.edited? %>
-          <strong class="fw-medium pl-2">Edited:</strong> <time datetime="<%= article.edited_at.utc.iso8601 %>"><%= article.readable_edit_date %></time>
+          <strong class="fw-medium pl-2">Editado:</strong> <time datetime="<%= article.edited_at.utc.iso8601 %>"><%= article.readable_edit_date %></time>
         <% end %>
         <% if article.collection_id %>
-          <strong class="fw-medium pl-2">Series:</strong> <%= article.series %>
+          <strong class="fw-medium pl-2">Séries:</strong> <%= article.series %>
         <% end %>
       </p>
     <% end %>
@@ -84,15 +84,15 @@
         <% end %>
       <% end %>
     <% elsif article.published %>
-      <a href="<%= article.path %>/manage" class="crayons-btn crayons-btn--ghost crayons-btn--s">Manage</a>
+      <a href="<%= article.path %>/manage" class="crayons-btn crayons-btn--ghost crayons-btn--s">Administrar</a>
     <% elsif @user == article.user %>
-      <a href="<%= article.path %>/delete_confirm" data-no-instant class="crayons-btn crayons-btn--ghost-danger crayons-btn--s">Delete</a>
+      <a href="<%= article.path %>/delete_confirm" data-no-instant class="crayons-btn crayons-btn--ghost-danger crayons-btn--s">Deletar</a>
     <% end %>
-    <a href="<%= article.path %>/edit" class="crayons-btn crayons-btn--ghost crayons-btn--s">Edit</a>
+    <a href="<%= article.path %>/edit" class="crayons-btn crayons-btn--ghost crayons-btn--s">Editar</a>
 
     <div class="js-ellipsis-menu relative inline-block">
       <button class="crayons-btn crayons-btn--ghost crayons-btn--s crayons-btn--icon js-ellipsis-menu-trigger">
-        <%= inline_svg_tag("overflow-horizontal.svg", aria: true, class: "crayons-icon", title: "More...") %>
+        <%= inline_svg_tag("overflow-horizontal.svg", aria: true, class: "crayons-icon", title: "Mais...") %>
       </button>
 
       <div class="crayons-dropdown top-100 right-0 align-left js-ellipsis-menu-dropdown p-1">
@@ -106,7 +106,7 @@
           <%= f.hidden_field :archived, value: !article.archived, id: "article_archived_#{article.id}" %>
 
           <button type="submit" class="crayons-link crayons-link--block w-100 border-0 bg-transparent">
-            <%= article.archived ? "Unarchive post" : "Archive post" %>
+            <%= article.archived ? "Desarquivar post" : "Arquivar post" %>
           </button>
         <% end %>
 

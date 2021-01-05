@@ -1,10 +1,10 @@
 module ArticlesHelper
   DASHBOARD_POSTS_SORT_OPTIONS = [
-    ["Recently Created", "creation-desc"],
-    ["Recently Published", "published-desc"],
-    ["Most Views", "views-desc"],
-    ["Most Reactions", "reactions-desc"],
-    ["Most Comments", "comments-desc"],
+    ["Criado Recentemente", "creation-desc"],
+    ["Publicado Recentemente", "published-desc"],
+    ["Mais Visualizações", "views-desc"],
+    ["Mais Reações", "reactions-desc"],
+    ["Mais Comentados", "comments-desc"],
   ].freeze
 
   def sort_options

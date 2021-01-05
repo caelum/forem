@@ -5,37 +5,37 @@
   </a>
 
   <a class="crayons-link crayons-link--block <%= "crayons-link--current" if params[:action] == "series" && (params[:which] == "organization" || params[:which].blank?) %>" href="/<%= current_user.username %>/series">
-    Series
+    Séries
     <span class="crayons-indicator"><%= @user.collections.count %></span>
   </a>
 
   <a class="crayons-link crayons-link--block <%= "crayons-link--current" if params[:action] == "followers" %>" href="/dashboard/user_followers">
-    Followers
+    Seguidores
     <span class="crayons-indicator"><%= @user.followers_count %></span>
   </a>
 
   <a class="crayons-link crayons-link--block <%= "crayons-link--current" if params[:action] == "following_tags" %>" href="/dashboard/following_tags">
-    Following tags
+    Seguindo tags
     <span class="crayons-indicator"><%= @user.following_tags_count %></span>
   </a>
 
   <a class="crayons-link crayons-link--block <%= "crayons-link--current" if params[:action] == "following_users" %>" href="/dashboard/following_users">
-    Following users
+    Seguindo usuários
     <span class="crayons-indicator"><%= @user.following_users_count %></span>
   </a>
 
   <a class="crayons-link crayons-link--block <%= "crayons-link--current" if params[:action] == "following_organizations" %>" href="/dashboard/following_organizations">
-    Following organizations
+    Seguindo organizações
     <span class="crayons-indicator"><%= @user.following_organizations_count %></span>
   </a>
 
   <a class="crayons-link crayons-link--block <%= "crayons-link--current" if params[:action] == "following_podcasts" %>" href="/dashboard/following_podcasts">
-    Following podcasts
+    Seguindo podcasts
     <span class="crayons-indicator"><%= @user.following_podcasts_count %></span>
   </a>
 
   <a class="crayons-link crayons-link--block" href="/listings/dashboard" data-no-instant>
-    Listings
+    Listas
     <%= inline_svg_tag("external-link.svg", aria: true, class: "crayons-icon", title: "Moderation") %>
   </a>
 
