@@ -101,15 +101,15 @@
     <div class="crayons-card crayons-card--secondary p-4">
       <div class="flex items-center mb-4">
         <%= inline_svg_tag("post.svg", aria: true, class: "crayons-icon mr-3 color-base-50", title: "Post") %>
-        <%= pluralize @user.articles.published.size, "post" %> published
+        <%= pluralize @user.articles.published.size, "post" %> publicados
       </div>
       <div class="flex items-center mb-4">
         <%= inline_svg_tag("comment.svg", aria: true, class: "crayons-icon mr-3 color-base-50", title: "Comment") %>
-        <%= pluralize @user.comments.where(deleted: false).size, "comment" %> written
+        <%= pluralize @user.comments.where(deleted: false).size, "comentários" %> escritos
       </div>
       <div class="flex items-center">
         <%= inline_svg_tag("tag.svg", aria: true, class: "crayons-icon mr-3 color-base-50", title: "Tag") %>
-        <%= pluralize @user.decorate.cached_followed_tags.size, "tag" %> followed
+        <%= pluralize @user.decorate.cached_followed_tags.size, "tag" %> seguidas
       </div>
     </div>
   <% end %>

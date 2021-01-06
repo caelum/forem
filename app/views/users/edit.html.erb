@@ -21,7 +21,7 @@
 
 <header class="crayons-layout crayons-layout--limited-l crayons-layout--1-col p-4">
   <% if @tab == "organization" && @organizations.present? %>
-    <h1 class="crayons-title">Settings for
+    <h1 class="crayons-title">Configurações para
       <select class="crayons-select lh-tight w-25 align-text-top w-max" onchange="window.location.href=this.value">
         <% options = @organizations.pluck(:slug, :id).each do |arr| %>
           <% arr[0] = "@#{arr[0]}" %>
@@ -35,7 +35,7 @@
     </h1>
   <% else %>
     <h1 class="crayons-title">
-      Settings for <a href="<%= user_url(@user) || "#" %>">@<%= @user.username.truncate(User::USERNAME_MAX_LENGTH) %></a>
+      Configurações para <a href="<%= user_url(@user) || "#" %>">@<%= @user.username.truncate(User::USERNAME_MAX_LENGTH) %></a>
     </h1>
   <% end %>
 </header>

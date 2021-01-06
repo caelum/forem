@@ -94,11 +94,11 @@ export class Help extends Component {
         data-testid="basic-editor-help"
         className="crayons-card crayons-card--secondary p-4 mb-6"
       >
-        You are currently using the basic markdown editor that uses{' '}
+        Você está usando um editor básico de markdown {' '}
         <a href="#frontmatter" onClick={this.toggleModal('frontmatterShowing')}>
           Jekyll front matter
         </a>
-        . You can also use the <em>rich+markdown</em> editor you can find in{' '}
+        . Você também pode usar o editor <em>rich+markdown</em>, que pode ser encontrado em{' '}
         <a href="/settings/customization">
           UX settings
           <svg
@@ -127,16 +127,16 @@ export class Help extends Component {
         data-testid="format-help"
         className="crayons-article-form__help crayons-article-form__help--body"
       >
-        <h4 className="mb-2 fs-l">Editor Basics</h4>
+        <h4 className="mb-2 fs-l">Editor básico</h4>
         <ul className="list-disc pl-6 color-base-70">
           <li>
             Use{' '}
             <a href="#markdown" onClick={this.toggleModal('markdownShowing')}>
               Markdown
             </a>{' '}
-            to write and format posts.
+            para escrever e formatar posts.
             <details className="fs-s my-1">
-              <summary class="cursor-pointer">Commonly used syntax</summary>
+              <summary class="cursor-pointer">Sintaxe comumente usada</summary>
               <table className="crayons-card crayons-card--secondary crayons-table crayons-table--compact w-100 mt-2 mb-4 lh-tight">
                 <tbody>
                   <tr>
@@ -229,15 +229,14 @@ export class Help extends Component {
             </details>
           </li>
           <li>
-            You can use{' '}
+            Você pode usar{' '}
             <a href="#liquid" onClick={this.toggleModal('liquidShowing')}>
               Liquid tags
             </a>{' '}
-            to add rich content such as Tweets, YouTube videos, etc.
+            para adicionar conteúdo, como Tweets, vídeos do YouTube, etc.
           </li>
           <li>
-            In addition to images for the post's content, you can also drag and
-            drop a cover image
+            Além de imagens no conteúdo da postagem, você tabém pode arrastar e soltar uma imagem para capa.
           </li>
         </ul>
       </div>

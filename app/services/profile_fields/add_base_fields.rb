@@ -2,8 +2,8 @@ module ProfileFields
   class AddBaseFields
     include FieldDefinition
 
-    group "Basic" do
-      field "Display email on profile",
+    group "Básico" do
+      field "Mostrar email no perfil",
             :check_box,
             display_area: "settings_only"
       field "Website URL",

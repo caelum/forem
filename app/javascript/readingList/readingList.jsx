@@ -127,12 +127,12 @@ export class ReadingList extends Component {
           <FilterText
             selectedTags={selectedTags}
             query={query}
-            value="Your reading list is empty"
+            value="Sua lista de leitura está"
           />
           <p class="color-base-60 pt-2">
-            Click the{' '}
+            Clique na{' '}
             <span class="fw-bold">
-              bookmark reaction
+              reação de bookmark
               <svg
                 width="24"
                 height="24"
@@ -144,7 +144,7 @@ export class ReadingList extends Component {
                 <path d="M5 2h14a1 1 0 011 1v19.143a.5.5 0 01-.766.424L12 18.03l-7.234 4.536A.5.5 0 014 22.143V3a1 1 0 011-1zm13 2H6v15.432l6-3.761 6 3.761V4z" />
               </svg>
             </span>
-            when viewing a post to add it to your reading list.
+            ao visualizar uma postagem para adicioná-la à sua lista de leitura.
           </p>
         </div>
       );
@@ -196,7 +196,7 @@ export class ReadingList extends Component {
       <div>
         <header className="crayons-layout flex justify-between items-center pb-0">
           <h1 class="crayons-title">
-            {isStatusViewValid ? 'Reading list' : 'Archive'}
+            {isStatusViewValid ? 'Lista de leitura' : 'Arquivo'}
             {` (${totalCount > 0 ? totalCount : '0'})`}
           </h1>
 
@@ -209,7 +209,7 @@ export class ReadingList extends Component {
               tagName="a"
               data-no-instant
             >
-              {isStatusViewValid ? 'View archive' : 'View reading list'}
+              {isStatusViewValid ? 'Ver arquivo' : 'Ver lista de leitura'}
             </Button>
             <input
               aria-label="Search..."

@@ -2,7 +2,7 @@
   <h3><%= @organization.name %></h3>
   <div class="grid gap-2">
     <% @organization.users.each do |user| %>
-      <div class="crayons-card crayons-card--secondary p-4">
+      <div class="">
         <a href="<%= user.path %>"><%= user.name %></a>
       </div>
     <% end %>

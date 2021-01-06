@@ -3,7 +3,7 @@
   <% cache "activity-badge-reward-#{json_data['badge_achievement']['badge_id']}" do %>
     <header class="mb-2 m:mb-4">
       <h3 class="fw-normal fs-l s:fs-xl m:fs-2xl">
-      You received the <strong class="fw-bold"><%= sanitize(json_data["badge_achievement"]["badge"]["title"]) %></strong> badge
+      Você recebeu a badge <strong class="fw-bold"><%= sanitize(json_data["badge_achievement"]["badge"]["title"]) %></strong>
       </h3>
       <p class="fs-l"><%= json_data["badge_achievement"]["badge"]["description"] %></p>
     </header>
@@ -14,7 +14,7 @@
     </div>
   <% end %>
 
-  <p><a href="<%= json_data["user"]["path"] %>" class="crayons-btn w-100 m:w-50">Visit your profile</a></p>
-  <p class="max-w-75 mx-auto">You also get <a href="/credits" class="crayons-link crayons-link--brand fw-bold">5 new credits</a> to use for <a href="/listings">community listings</a> if you have anything you'd like to promote. 🎉</p>
-  <p class="fs-s"><a href="<%= about_listings_url %>" class="crayons-link crayons-link--secondary">More information about listings<a></p>
+  <p><a href="<%= json_data["user"]["path"] %>" class="crayons-btn w-100 m:w-50">Visitar seu perfil</a></p>
+  <p class="max-w-75 mx-auto">Você também ganha <a href="/credits" class="crayons-link crayons-link--brand fw-bold">5 novos créditos</a> para usar em <a href="/listings">listas da comunidade</a> se você tem algo que gostaria de promover. 🎉</p>
+  <p class="fs-s"><a href="<%= about_listings_url %>" class="crayons-link crayons-link--secondary">Mais infomações sobre listas<a></p>
 </div>

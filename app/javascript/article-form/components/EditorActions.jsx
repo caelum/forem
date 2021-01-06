@@ -55,7 +55,7 @@ export const EditorActions = ({
   return (
     <div className="crayons-article-form__footer">
       <Button className="mr-2 whitespace-nowrap" onClick={onPublish}>
-        {published || isVersion1 ? 'Save changes' : 'Publish'}
+        {published || isVersion1 ? 'Salvar alterações' : 'Publicar'}
       </Button>
 
       {!(published || isVersion1) && (
@@ -64,7 +64,7 @@ export const EditorActions = ({
           className="mr-2 whitespace-nowrap"
           onClick={onSaveDraft}
         >
-          Save <span className="hidden s:inline">draft</span>
+          Salvar <span className="hidden s:inline">rascunho</span>
         </Button>
       )}
 
@@ -97,7 +97,7 @@ export const EditorActions = ({
           className="whitespace-nowrap fw-normal"
           size="s"
         >
-          Revert <span className="hidden s:inline">new changes</span>
+          Reverter <span className="hidden s:inline">novas mudanças</span>
         </Button>
       )}
     </div>

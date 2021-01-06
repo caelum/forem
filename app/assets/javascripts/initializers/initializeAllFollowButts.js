@@ -223,7 +223,7 @@ function assignState(butt, newState) {
     addFollowText(butt, style);
   } else if (newState === 'self') {
     butt.dataset.verb = 'self';
-    butt.textContent = 'Edit profile';
+    butt.textContent = 'Editar perfil';
   } else {
     butt.dataset.verb = 'follow';
     addFollowingText(butt, style);

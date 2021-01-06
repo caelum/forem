@@ -49,7 +49,7 @@
       </span>
 
       <div class="crayons-field__label">
-        <span class="hidden s:inline-block mr-2">Write a new post</span>
+        <span class="hidden s:inline-block mr-2">Escreva um novo post</span>
         <% if organizations && organizations.size > 0 %>
           <select name="article[organization_id]" id="article_publish_under_org" class="crayons-select w-auto mt-0">
             <%= options_for_select({ "Personal" => "" }.merge(organizations.pluck(:name, :id).to_h), article.organization_id || "") %>
@@ -58,7 +58,7 @@
       </div>
 
       <div class="crayons-article-form__tabs crayons-tabs ml-auto">
-        <button class="crayons-tabs__item crayons-tabs__item--current" type="button">Edit</button><button class="crayons-tabs__item " type="button">Preview</button>
+        <button class="crayons-tabs__item crayons-tabs__item--current" type="button">Editar</button><button class="crayons-tabs__item " type="button">Preview</button>
       </div>
 
       <div class="crayons-article-form__close">
@@ -93,7 +93,7 @@
       <div class="crayons-article-form__body text-padding">
         <div class="crayons-article-form__toolbar">
           <button class="crayons-btn crayons-btn--ghost-dimmed crayons-btn--icon-left fw-normal" type="button">
-            <%= ("#{inline_svg_tag('image.svg', aria: true, class: 'crayons-icon', title: 'Image')}Upload image").delete!("\n").html_safe %>
+            <%= ("#{inline_svg_tag('image.svg', aria: true, class: 'crayons-icon', title: 'Image')}Upload de imagem").delete!("\n").html_safe %>
             <input type="file" id="image-upload-field" class="w-100 h-100 absolute left-0 right-0 top-0 bottom-0 overflow-hidden opacity-0 cursor-pointer" multiple accept="image/*" data-max-file-size-mb="25" />
           </button>
         </div>
@@ -105,11 +105,11 @@
     <div class="crayons-article-form__aside"></div>
 
     <div class="crayons-article-form__footer">
-      <button class="crayons-btn mr-2" type="button">Publish</button>
-      <button class="crayons-btn crayons-btn--secondary mr-2" type="button">Save draft</button>
+      <button class="crayons-btn mr-2" type="button">Publicar</button>
+      <button class="crayons-btn crayons-btn--secondary mr-2" type="button">Salvar rascunho</button>
       <div class="relative">
         <button class="crayons-btn crayons-btn--ghost crayons-btn--icon" type="button" title="Post options">
-          <%= inline_svg_tag("cog.svg", aria: true, class: "crayons-icon", title: "Options") %>
+          <%= inline_svg_tag("cog.svg", aria: true, class: "crayons-icon", title: "Opções") %>
         </button>
       </div>
     </div>
